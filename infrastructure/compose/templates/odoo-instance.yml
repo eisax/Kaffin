@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  web:
+    image: {{ODOO_IMAGE}}
+    container_name: {{CONTAINER_NAME_ODOO}}
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      - HOST=db
+      - USER={{DB_USER}}
+      - PASSWORD={{DB_PASSWORD}}
+    volumes:
+      - odoo_filestore:/var/lib/odoo
+      - {{ADDONS_PATH}}:/mnt/extra-addons
+    networks:
+      - internal
+      - traefik_public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.{{ROUTER_NAME}}.rule=Host(`{{DOMAIN}}`)"
+      - "traefik.http.routers.{{ROUTER_NAME}}.entrypoints=websecure"
+      - "traefik.http.routers.{{ROUTER_NAME}}.tls=true"
+      - "traefik.http.routers.{{ROUTER_NAME}}.tls.certresolver=letsencrypt"
+      - "traefik.http.services.{{SERVICE_NAME}}.loadbalancer.server.port=8069"
+
+  db:
+    image: postgres:16-alpine
+    container_name: {{CONTAINER_NAME_DB}}
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER={{DB_USER}}
+      - POSTGRES_PASSWORD={{DB_PASSWORD}}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+  traefik_public:
+    external: true
+
+volumes:
+  odoo_filestore:
+  postgres_data:

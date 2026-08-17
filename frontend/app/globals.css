@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #09090b;
+    --foreground: #f4f4f5;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Enforce 5px border radius across all textfields, inputs, buttons, and cards */
+input,
+textarea,
+select,
+button,
+.card,
+[class*="rounded-xl"],
+[class*="rounded-2xl"],
+[class*="rounded-lg"],
+[class*="rounded-md"] {
+  border-radius: 5px !important;
+}
+
+/* Remove all glowing / heavy blur shadows across the entire UI */
+*,
+::before,
+::after {
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: none !important;
+}
+
+/* Remove outline glow on focus, keep clean crisp border */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

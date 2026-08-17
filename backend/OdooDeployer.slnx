@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OdooDeployer.Api/OdooDeployer.Api.csproj" />
+    <Project Path="src/OdooDeployer.Application/OdooDeployer.Application.csproj" />
+    <Project Path="src/OdooDeployer.Domain/OdooDeployer.Domain.csproj" />
+    <Project Path="src/OdooDeployer.Infrastructure/OdooDeployer.Infrastructure.csproj" />
+    <Project Path="src/OdooDeployer.Worker/OdooDeployer.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OdooDeployer.Api.Tests/OdooDeployer.Api.Tests.csproj" />
+    <Project Path="tests/OdooDeployer.Application.Tests/OdooDeployer.Application.Tests.csproj" />
+    <Project Path="tests/OdooDeployer.Domain.Tests/OdooDeployer.Domain.Tests.csproj" />
+    <Project Path="tests/OdooDeployer.Infrastructure.Tests/OdooDeployer.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>
