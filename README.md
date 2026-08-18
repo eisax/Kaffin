@@ -4,7 +4,7 @@
 
 ---
 
-## 📸 Screenshots & UI Preview
+## Screenshots & UI Preview
 
 ### 1. Instances & Tenant Overview
 ![Instances & Tenant Overview](screenshots/instances_list.png)
@@ -19,17 +19,17 @@
 
 ---
 
-## 🎬 Video Demo Walkthrough
+## Video Demo Walkthrough
 
 A live walkthrough showcasing zero-touch Odoo provisioning, automated database initialization, and instant Traefik TLS routing:
 
-👉 **[Watch Walkthrough Video (QuickTime / MOV)](screenshots/demo_walkthrough.mov)**
+**[Watch Walkthrough Video (QuickTime / MOV)](screenshots/demo_walkthrough.mov)**
 
 *(Or download/view [`screenshots/demo_walkthrough.mov`](screenshots/demo_walkthrough.mov) locally)*
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 ```text
                                USERS
@@ -61,7 +61,7 @@ A live walkthrough showcasing zero-touch Odoo provisioning, automated database i
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -84,7 +84,7 @@ A live walkthrough showcasing zero-touch Odoo provisioning, automated database i
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### 1. Start Infrastructure Dependencies
 ```bash

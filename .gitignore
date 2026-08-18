@@ -6,7 +6,6 @@ obj/
 *.userosscache
 *.sln.docstates
 .vs/
-.vscode/
 
 # Node / Frontend
 node_modules/
@@ -14,7 +13,6 @@ node_modules/
 out/
 build/
 dist/
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -33,3 +31,7 @@ data/
 *.db
 *.db-shm
 *.db-wal
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
